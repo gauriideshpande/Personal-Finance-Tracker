@@ -13,4 +13,8 @@ class CSV:
             df = pd.DataFrame(columns=['Date', 'Amount' , 'Category' , 'Description'])
             df.to_csv(cls.CSV_FILE, index=False)
 
+    @classmethod
+    def data_entry(cls, Date, Amount, Category, Description):
+        new_entry = {'Date': Date, 'Amount': Amount, 'Category': Category, 'Description': Description}
+
 CSV.initialize_csv()
